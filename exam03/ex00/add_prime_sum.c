@@ -62,32 +62,31 @@ int is_prime(int nb)
 
 	while(i * i <= nb)
 	{
-		while(nb % i == 0)
+		if(nb % i == 0)
 			return 0;
 		i++;
 	}
 	return 1;
 }
 
-int	main(int argc, char *argv[])
+int	main(int argc, char **argv)
 {
-	int	nb;
-	int sum;
-
-	if (argc == 2)
-	{
-		nb = ft_atoi(argv[1]);
-		sum = 0;
-		while (nb > 0)
+    if(argc != 2)
+    {
+        write(1, "0", 1);
+    }
+    else
+    {
+        int nb = ft_atoi(argv[1]);
+        int sum = 0;
+        while(nb > 0)
         {
-			if (is_prime(nb--))
-				sum += (nb + 1);
+            if(is_prime(nb))
+                sum += nb;
+            nb--;    
         }
-		ft_putnbr(sum);
-	}
-    
-	if (argc != 2)
-		ft_putnbr(0);
-	write(1, "\n", 1);
-	return (0);
+        ft_putnbr(sum);
+    }
+    write(1, "\n", 1);
+    return 0;
 }
