@@ -30,7 +30,7 @@ void ft_putnbr(int nb)
 
 int	main(int argc, char **argv)
 {
-	//(void)argv;
+	(void)argv; // By casting argv to void, we're telling the compiler that we are not using argv. 
 	ft_putnbr(argc - 1);
 	write(1, "\n", 1);
 	return 0;
