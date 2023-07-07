@@ -1,6 +1,6 @@
 | Exercises  | EX Name |
 | ------------- | ------------- |
-| Ex00  |  exam00/ex00/aff_a.c  |
+| Ex00  |  [aff_a.c](https://github.com/1McLongLong/myExams/blob/master/exam00/ex00/aff_a.c)  |
 | Ex01  |  ft_countdown.c  |
 | Ex02  |  ft_print_numbers.c  |
 | Ex03  |  hello.c  |
