@@ -12,6 +12,7 @@ void ft_putchar(char c)
     write(1, &c, 1);
 }   
 
+/*
 int ft_strlen(char *str)
 {
     int i = 0;
@@ -19,7 +20,6 @@ int ft_strlen(char *str)
         i++;
     return i;    
 }
-
 void last_word(char *str)
 {
     int len = ft_strlen(str);
@@ -45,6 +45,27 @@ void last_word(char *str)
     }
     ft_putchar('\n');
 }
+*/
+void	last_word(char *str)
+{
+	int	j;
+	int i;
+
+	i = 0;
+	j = 0;
+	while (str[i])
+	{
+		if (str[i] == ' ' && str[i + 1] >= 33 && str[i + 1] <= 126)
+			j = i + 1;
+		i++;
+	}
+	while (str[j] >= 33 && str[j] <= 127)
+	{
+		ft_putchar(str[j]);
+		j++;
+	}
+}
+
 
 int main(int argc, char **argv)
 {
