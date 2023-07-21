@@ -12,47 +12,34 @@ If the number of arguments is not 1, just display a newline.
 #include <unistd.h>
 #include <stdio.h>
 
-int is_alpha(char c)
+void    ft_putchar_n(char c, int i)
 {
-    return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
-}
-
-int get_index(char c)
-{
-    int index = 0;
-    char letter = 'a';
-    if(c >= 'A' && c <= 'Z')
-        c += 32;
-    while(c != letter)
+    while (i > 0)
     {
-        letter++;
-        index++;
-    }    
-    return index;
-}
-
-void repeat_alpha(char *str)
-{
-    while(*str)
-    {
-        if (is_alpha(*str))
-        {
-            int index = get_index(*str);
-            while(index--)
-                 write(1, str, 1);
-        }
-        write(1, str, 1);
-        str++;
+        write(1, &c, 1);
+        --i;
     }
 }
 
-int main(int argc, char **argv)
+void    repeat_alpha(char *str)
 {
-    if(argc != 2)
+    while (*str != '\0')
     {
-        write(1, "\n", 1);
-        return 0;
+        if (*str >= 'a' && *str <= 'z')
+            ft_putchar_n(*str, *str + 1 - 'a');
+        else if (*str >= 'A' && *str <= 'Z')
+            ft_putchar_n(*str, *str + 1 - 'A');
+        else
+            write(1, str, 1);
+        ++str;
     }
-    repeat_alpha(argv[1]);
+}
+
+int main(int ac, char **av)
+{
+    if (ac == 2)
+        repeat_alpha(av[1]);
+    
     write(1, "\n", 1);
+    return (0);
 }
