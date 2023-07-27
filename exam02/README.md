@@ -3,7 +3,7 @@
 | Ex00  |  [ft_atoi.c](https://github.com/1McLongLong/myExams/blob/master/exam02/ex00/ft_atoi.c)  |
 | Ex01  |  [ft_strdup.c](https://github.com/1McLongLong/myExams/blob/master/exam02/ex01/ft_strdup.c)  |
 | Ex02  |  [inter.c](https://github.com/1McLongLong/myExams/blob/master/exam02/ex02/inter.c)  |
-| Ex03  |  [reverse_bits.c](https://github.com/1McLongLong/myExams/blob/master/exam02/ex04/reverse_bits.c)  |
+| Ex03  |  [reverse_bits.c](https://github.com/1McLongLong/myExams/blob/master/exam02/ex03/reverse_bits.c)  |
 | Ex04  |  [swap_bits.c](https://github.com/1McLongLong/myExams/blob/master/exam02/ex05/swap_bits.c)  |
 | Ex05  |  [union.c](https://github.com/1McLongLong/myExams/blob/master/exam02/ex06/union.c)  |
 | Ex06  |  [alpha_mirror.c](https://github.com/1McLongLong/myExams/blob/master/exam02/ex07/alpha_mirror.c)  |
