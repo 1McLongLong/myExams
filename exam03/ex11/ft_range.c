@@ -62,26 +62,31 @@ void ft_putnbr(int nb)
 }
 
 
-int *ft_range(int start, int end)
+int     *ft_range(int start, int end)
 {
     int *r;
     int len;
-    len = (end >= start) ? end - start + 1 : start - end + 1;
-
-    if (!(r = (int*)malloc(len * sizeof(int))))
-        return NULL;
-
+    if (end >= start)
+        len = end - start + 1;
+    else
+        len = start - end + 1;
+    
+    r = malloc(sizeof(int) * len);
+    if (r == 0)
+        return 0;
+    
     int i = 0;
-    while (i < len)
+    
+    while(i < len)
     {
-        r[i] = start;
-        start = end >= start ? start + 1 : start - 1;
-        i++;
+        if (end >= start)
+            r[i] = start++;
+        else
+            r[i] = start--;
+        i++;    
     }
-
     return r;
 }
-
 
 
 int main(int argc, char **argv)
