@@ -6,7 +6,7 @@ newline.
 #include <stdio.h>
 #include <unistd.h>
 
-
+// jqck
 int main(void)
 {
     char c;
